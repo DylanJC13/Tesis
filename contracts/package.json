@@ -1,0 +1,41 @@
+{
+  "name": "diplomasnft-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network polygonAmoy"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.3",
+    "@nomicfoundation/hardhat-ethers-chai-matchers": "^3.0.2",
+    "@nomicfoundation/hardhat-ignition": "^3.0.5",
+    "@nomicfoundation/hardhat-ignition-ethers": "^3.0.5",
+    "@nomicfoundation/ignition-core": "^3.0.5",
+    "@nomicfoundation/hardhat-keystore": "^3.0.2",
+    "@nomicfoundation/hardhat-mocha": "^3.0.7",
+    "@nomicfoundation/hardhat-network-helpers": "^3.0.3",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.1",
+    "@nomicfoundation/hardhat-typechain": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^3.0.7",
+    "@types/chai": "^5.0.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.30",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.14.0",
+    "hardhat": "^3.0.15",
+    "mocha": "^11.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

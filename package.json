@@ -1,0 +1,23 @@
+{
+  "name": "diplomas-nft-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "contracts:compile": "npm --workspace contracts run compile",
+    "contracts:test": "npm --workspace contracts run test",
+    "contracts:deploy": "npm --workspace contracts run deploy",
+    "backend:dev": "npm --workspace backend run dev",
+    "backend:start": "npm --workspace backend run start",
+    "frontend:dev": "npm --workspace frontend run dev",
+    "frontend:build": "npm --workspace frontend run build",
+    "frontend:start": "npm --workspace frontend run start"
+  }
+}

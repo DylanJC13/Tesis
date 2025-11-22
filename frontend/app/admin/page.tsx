@@ -51,8 +51,13 @@ export default function AdminPage() {
   const [status, setStatus] = useState<string | null>(null);
   const [minted, setMinted] = useState<MintedDiploma[]>([]);
   const [uploading, setUploading] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const connector = useMemo(() => connectors[0], [connectors]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const fetchEvents = useCallback(async () => {
     if (!publicClient || !diplomaContractAddress) return;
@@ -91,6 +96,10 @@ export default function AdminPage() {
       void fetchEvents();
     }
   }, [isConfirmed, fetchEvents]);
+
+  if (!mounted) {
+    return <main className="space-y-6" />;
+  }
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
